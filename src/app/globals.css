@@ -18,16 +18,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(167.96deg, #f4f9ff 0%, #e0edfb 100%);
+  font-family: Inter, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .btn {
+    @apply flex h-[48px] w-[240px] items-center justify-center self-center rounded-[30px] bg-[linear-gradient(110.46deg,#70C3FF_12.27%,#4B65FF_93.92%)] px-[32px] py-[15px] text-base font-bold text-white;
+  }
+  .input-field {
+    @apply h-12 w-full rounded-[10px] border-[1px] border-[#6F91BC] pb-[10px] pl-[20px] pr-[10px] pt-[10px] text-[#151D51] placeholder:text-[#6F91BC] focus:transition-all focus:placeholder:text-[#4A4E71] data-[valid=false]:border-[#FF8080] data-[valid=true]:border-[#27B274] data-[valid=false]:text-[#FF8080] data-[valid=true]:text-[#27B274];
   }
 }
